@@ -1,4 +1,4 @@
-import "./styles.css";
+import "../styles.css";
 import Gentleman from "./Gentleman/Gentleman";
 import Button from "./Button/Button";
 import Info from "./Info/Info";
@@ -48,9 +48,9 @@ function App() {
       </section>
       <main className="main">
         <ul className="gentlemen">
-          <Gentleman gentleman={gentlemenList[0]} />
-          <Gentleman gentleman={gentlemenList[1]} />
-          <Gentleman gentleman={gentlemenList[2]} />
+          {gentlemenList.map((gentlemanData) => {
+            return <Gentleman eachPerson={gentlemanData} />;
+          })}
         </ul>
       </main>
     </div>
