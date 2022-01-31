@@ -36,6 +36,7 @@ function App() {
       selected: true,
     },
   ];
+
   return (
     <div>
       <header className="main-header">
@@ -47,10 +48,9 @@ function App() {
       </section>
       <main className="main">
         <ul className="gentlemen">
-          <Gentleman />
-          <Gentleman />
-          <Gentleman />
-          <Gentleman />
+          <Gentleman gentleman={gentlemenList[0]} />
+          <Gentleman gentleman={gentlemenList[1]} />
+          <Gentleman gentleman={gentlemenList[2]} />
         </ul>
       </main>
     </div>

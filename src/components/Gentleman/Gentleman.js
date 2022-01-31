@@ -1,10 +1,10 @@
-const Gentleman = () => {
+const Gentleman = (gentleman) => {
   return (
     <li className="gentleman">
       <div className="gentleman__avatar-container">
         <img
           className="gentleman__avatar"
-          src="img/fary.jpg"
+          src={`img/${gentleman.picture}`}
           alt="The Fary pointing at you"
         />
         <span className="gentleman__initial">F</span>
@@ -14,7 +14,7 @@ const Gentleman = () => {
         <ul className="gentleman__data-list">
           <li className="gentleman__data">
             <span className="gentleman__data-label">Profession:</span>
-            Influencer
+            {gentleman.profession}
           </li>
           <li className="gentleman__data">
             <span className="gentleman__data-label">Status:</span> RIP
