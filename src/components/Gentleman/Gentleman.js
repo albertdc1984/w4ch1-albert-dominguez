@@ -5,7 +5,7 @@ const Gentleman = ({ eachPerson }) => {
         <img
           className="gentleman__avatar"
           src={`./img/${eachPerson.picture}`}
-          alt="The Fary pointing at you"
+          alt={eachPerson.alternativeText}
         />
         <span className="gentleman__initial">F</span>
       </div>
@@ -17,10 +17,12 @@ const Gentleman = ({ eachPerson }) => {
             {eachPerson.profession}
           </li>
           <li className="gentleman__data">
-            <span className="gentleman__data-label">Status:</span> RIP
+            <span className="gentleman__data-label">Status:</span>{" "}
+            {eachPerson.status}
           </li>
           <li className="gentleman__data">
-            <span className="gentleman__data-label">Twitter:</span> Pending
+            <span className="gentleman__data-label">Twitter:</span>{" "}
+            {eachPerson.twitter}
           </li>
         </ul>
       </div>

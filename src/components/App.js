@@ -35,6 +35,16 @@ function App() {
       alternativeText: "Churchs pointing at you",
       selected: true,
     },
+    {
+      id: 4,
+      name: "Dr Mario",
+      status: "Alive and kicking",
+      profession: "Babysitter",
+      twitter: "@supaMario84",
+      picture: "mario_small.jpg",
+      alternativeText: "Ahítaltío pointing at you",
+      selected: true,
+    },
   ];
 
   return (
