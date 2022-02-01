@@ -54,6 +54,11 @@ export const getInitial = (gent) => {
   return nameParts[0].charAt(0).toUpperCase();
 };
 
+const selectedGentlemen = gentlemenList.filter(
+  (gentleman) => gentleman.selected
+).length;
+console.log(selectedGentlemen);
+
 function App() {
   return (
     <div>
@@ -61,7 +66,7 @@ function App() {
         <h1 className="main-title">The pointing gentlemen</h1>
       </header>
       <section className="controls">
-        <Info />
+        <Info actives={selectedGentlemen} />
         <Button classB="button button--select" text={"Select All"} />
       </section>
       <main className="main">
