@@ -1,5 +1,5 @@
-const Info = () => {
-  return <p className="info">0 gentlemen pointing at you</p>;
+const Info = ({ actives }) => {
+  return <p className="info">{actives} gentlemen pointing at you</p>;
 };
 
 export default Info;

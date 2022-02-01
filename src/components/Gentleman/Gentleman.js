@@ -1,3 +1,6 @@
+import Button from "../Button/Button";
+import { getInitial } from "../App";
+
 const Gentleman = ({ eachPerson }) => {
   return (
     <li className="gentleman">
@@ -7,7 +10,7 @@ const Gentleman = ({ eachPerson }) => {
           src={`./img/${eachPerson.picture}`}
           alt={eachPerson.alternativeText}
         />
-        <span className="gentleman__initial">F</span>
+        <span className="gentleman__initial">{getInitial(eachPerson)}</span>
       </div>
       <div className="gentleman__data-container">
         <h2 className="gentleman__name">{eachPerson.name}</h2>
@@ -26,8 +29,10 @@ const Gentleman = ({ eachPerson }) => {
           </li>
         </ul>
       </div>
-      <i className="icon gentleman__icon fas fa-check"></i>
-      <i className="icon gentleman__icon gentleman__icon--delete fas fa-times"></i>
+      <Button classB={"icon gentleman__icon fas fa-check"}></Button>
+      <Button
+        classB={"icon gentleman__icon gentleman__icon--delete fas fa-times"}
+      ></Button>
     </li>
   );
 };
